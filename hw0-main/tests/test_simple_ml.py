@@ -1,7 +1,8 @@
 import numpy as np
 import sys
 import numdifftools as nd
-sys.path.append("./src")
+sys.path.append("../src")
+# sys.path.append("../")
 import mugrade
 from simple_ml import *
 try:
@@ -30,8 +31,8 @@ def submit_add():
 ### TESTS/SUBMISSION CODE FOR parse_mnist()
 
 def test_parse_mnist():
-    X,y = parse_mnist("data/train-images-idx3-ubyte.gz",
-                      "data/train-labels-idx1-ubyte.gz")
+    X,y = parse_mnist("../train-images-idx3-ubyte.gz",
+                      "../train-labels-idx1-ubyte.gz")
     assert X.dtype == np.float32
     assert y.dtype == np.uint8
     assert X.shape == (60000,784)
